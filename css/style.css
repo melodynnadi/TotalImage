@@ -719,10 +719,10 @@ p {
 /* ===== PAGE HEADER ===== */
 .page-header {
   padding-top: calc(var(--nav-height) + 3rem);
-  padding-bottom: 2.5rem;
-  background: var(--gradient-header);
+  padding-bottom: 5rem;
+  background: linear-gradient(180deg, #eef4ff 0%, #e0f2fe 40%, #f0f7ff 70%, #ffffff 100%);
   text-align: center;
-  border-bottom: 1px solid rgba(0,102,255,0.08);
+  border-bottom: none;
 }
 
 .page-header__eyebrow {
