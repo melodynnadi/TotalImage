@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started — Total Image</title>
+  <meta name="description" content="Request a quote or schedule a free consultation with Total Image. Tell us about your business and we'll get back to you within a business day.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="Images/Total Image Logo FULL WHITE.png">
+</head>
+<body class="page-fade">
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav__logo" aria-label="Total Image Home">
+        <img src="Images/TotalImageBlackBlue.jpg" alt="Total Image" class="nav__logo-img">
+      </a>
+      <button class="nav__hamburger" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="get-started.html" class="nav__link nav__link--active">Get Started</a>
+        <a href="faq.html" class="nav__link">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header">
+    <div class="container">
+      <p class="page-header__eyebrow">Let's Work Together</p>
+      <h1 class="page-header__title">Get Started</h1>
+      <p class="page-header__subtitle">Request a quote or book a free consultation — we'll get back to you as soon as possible.</p>
+    </div>
+  </header>
+
+  <!-- ===== FORMS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="get-started-grid">
+
+        <!-- ===== REQUEST A QUOTE ===== -->
+        <div class="form-card" id="quote">
+          <h2 class="form-card__title">Request A Quote</h2>
+          <p class="form-card__desc">Tell us your name, preferred email, business name, desired service(s), and timeline. We'll review your request and get back to you with a realistic quote as soon as possible.</p>
+
+          <form id="quoteForm" novalidate>
+            <div class="form-group">
+              <label for="quoteName">Your Name *</label>
+              <input type="text" id="quoteName" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="quoteEmail">Preferred Email *</label>
+              <input type="email" id="quoteEmail" name="email" placeholder="jane@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="quoteBusiness">Business Name *</label>
+              <input type="text" id="quoteBusiness" name="business" placeholder="Your Business LLC" required>
+            </div>
+            <div class="form-group">
+              <label for="quoteServices">Desired Service(s) *</label>
+              <textarea id="quoteServices" name="services" placeholder="e.g., Business card design, brand package, social media ads&hellip;" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="quoteTimeline">Timeline</label>
+              <input type="text" id="quoteTimeline" name="timeline" placeholder="e.g., 2 weeks, end of month…">
+            </div>
+            <div class="form-group">
+              <label for="quoteDetails">Additional Details</label>
+              <textarea id="quoteDetails" name="details" placeholder="Tell us more about what you need…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--blue btn--large" style="width:100%;">Send Quote Request</button>
+          </form>
+
+          <!-- Success message -->
+          <div class="form-success" id="quoteSuccess">
+            <div class="form-success__icon">
+              <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h3>Quote Request Sent!</h3>
+            <p>We'll review your request and get back to you as soon as possible.</p>
+          </div>
+        </div>
+
+        <!-- ===== FREE CONSULTATION ===== -->
+        <div class="form-card" id="consultation">
+          <h2 class="form-card__title">Free Consultation</h2>
+          <p class="form-card__desc">Tell us your name, preferred email, business name, and what questions you have about our services. We'll take a look and get back to you as soon as possible.</p>
+
+          <form id="consultForm" novalidate>
+            <div class="form-group">
+              <label for="consultName">Your Name *</label>
+              <input type="text" id="consultName" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="consultEmail">Preferred Email *</label>
+              <input type="email" id="consultEmail" name="email" placeholder="jane@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="consultBusiness">Business Name *</label>
+              <input type="text" id="consultBusiness" name="business" placeholder="Your Business LLC" required>
+            </div>
+            <div class="form-group">
+              <label for="consultQuestions">Your Questions *</label>
+              <textarea id="consultQuestions" name="questions" placeholder="What would you like to know about our services?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--large" style="width:100%;">Send Consultation Request</button>
+          </form>
+
+          <!-- Success message -->
+          <div class="form-success" id="consultSuccess">
+            <div class="form-success__icon">
+              <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h3>Consultation Request Sent!</h3>
+            <p>We'll review your questions and get back to you as soon as possible.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">
+        <img src="Images/Total Image Logo Banner White & Blue.png" alt="Total Image" class="footer__logo-img">
+      </div>
+      <p class="footer__text">&copy; 2026 Total Image. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="services.html" class="footer__link">Services</a>
+        <a href="about.html" class="footer__link">About</a>
+        <a href="get-started.html" class="footer__link">Get Started</a>
+        <a href="faq.html" class="footer__link">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
