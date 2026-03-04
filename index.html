@@ -16,7 +16,7 @@
   <!-- ===== NAVIGATION ===== -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="container">
-      <a href="index.html" class="nav__logo" aria-label="Total Image Home">
+      <a href="#hero" class="nav__logo" aria-label="Total Image Home">
         <img src="Images/TotalImageBlackBlue.jpg" alt="Total Image" class="nav__logo-img">
       </a>
 
@@ -25,18 +25,19 @@
       </button>
 
       <div class="nav__links" id="navLinks">
-        <a href="index.html" class="nav__link nav__link--active">Home</a>
-        <a href="services.html" class="nav__link">Services</a>
-        <a href="about.html" class="nav__link">About</a>
-        <a href="get-started.html" class="nav__link">Get Started</a>
-        <a href="faq.html" class="nav__link">FAQ</a>
+        <a href="#hero" class="nav__link nav__link--active">Home</a>
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#get-started" class="nav__link">Get Started</a>
+        <a href="#faq" class="nav__link">FAQ</a>
       </div>
     </div>
   </nav>
 
   <main>
+
   <!-- ===== HERO ===== -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="hero__overlay"></div>
     <img src="Images/Totalimage1.png" alt="" class="hero__deco" aria-hidden="true">
     <div class="container hero__container">
@@ -44,21 +45,22 @@
       <h1 class="hero__title">Affordable Branding &amp; Marketing For Any Business!</h1>
       <p class="hero__subtitle">No Contracts. No upsells. Just what your business needs.</p>
       <div class="hero__actions">
-        <a href="get-started.html" class="btn btn--blue btn--large">Get a Free Quote</a>
-        <a href="services.html" class="btn btn--outline-dark btn--large">See What We Offer</a>
+        <a href="#get-started" class="btn btn--blue btn--large">Get a Free Quote</a>
+        <a href="#services" class="btn btn--outline-dark btn--large">See What We Offer</a>
       </div>
     </div>
   </section>
 
   <!-- ===== SERVICES OVERVIEW ===== -->
-  <section class="section home-services">
+  <section class="section home-services" id="services">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">What We Do</h2>
-        <p class="section-subtitle">Everything your business needs to get noticed — without the agency price tag.</p>
+        <p class="page-header__eyebrow">What We Offer</p>
+        <h2 class="section-title">Services</h2>
+        <p class="section-subtitle">Everything your business needs to look professional, reach customers, and grow — without the agency price tag.</p>
       </div>
       <div class="home-services__grid">
-        <a href="marketing.html" class="home-service-card">
+        <a href="#marketing" class="home-service-card">
           <div class="home-service-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><polyline points="3 20 23 20"/><polyline points="2 12 6 8 10 11 15 6 22 10"/><polyline points="19 6 22 6 22 9"/></svg>
           </div>
@@ -66,7 +68,7 @@
           <p>Ad campaigns, SEO, social media strategy, and marketing plans that drive real results.</p>
           <span class="home-service-card__link">Explore Marketing &rarr;</span>
         </a>
-        <a href="branding.html" class="home-service-card">
+        <a href="#branding" class="home-service-card">
           <div class="home-service-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"></path></svg>
           </div>
@@ -74,7 +76,7 @@
           <p>Logo design, brand identity, and complete brand kits that make your business memorable.</p>
           <span class="home-service-card__link">Explore Branding &rarr;</span>
         </a>
-        <a href="graphic-design.html" class="home-service-card">
+        <a href="#graphic-design" class="home-service-card">
           <div class="home-service-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/><path d="M14.5 17.5 4.5 15"/></svg>
           </div>
@@ -86,14 +88,487 @@
     </div>
   </section>
 
+  <!-- ===== MARKETING SERVICES DETAIL ===== -->
+  <section class="section" id="marketing">
+    <div class="container">
+      <div class="section-header">
+        <p class="page-header__eyebrow">Grow Your Audience</p>
+        <h2 class="section-title">Marketing Services</h2>
+        <p class="section-subtitle">Services that drive traffic, leads, and revenue.</p>
+        <p class="section-note">Pricing reflects planning, strategy, and guidance — not ad spending or long-term management.</p>
+      </div>
+      <div class="service-list">
+
+          <!-- Comprehensive Marketing Plans -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Comprehensive Marketing Plans</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">$300 <span class="price-tag__label">Essential</span></span>
+                <span class="price-tag price-tag--advanced">$550 <span class="price-tag__label">Advanced</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">Step by step guide on how to get your business seen by your market on your budget. Includes my personal suggestions, a slogan, and links to instructional videos.</p>
+          </div>
+
+          <!-- Market Research -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Market Research</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">$150 <span class="price-tag__label">Essential</span></span>
+                <span class="price-tag price-tag--advanced">$300 <span class="price-tag__label">Advanced</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">Analysis of the local business environment, including competition, comparative pricing, positioning suggestions, and survey research.</p>
+          </div>
+
+          <!-- Ad Campaign Consultation -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Ad Campaign Consultation &amp; Planning</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">$75 <span class="price-tag__label">Essential</span></span>
+                <span class="price-tag price-tag--advanced">$125 <span class="price-tag__label">Advanced</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">Personalized guide on how, where, and when to advertise to best connect with your audience and maximize your budget.</p>
+          </div>
+
+          <!-- SEO -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Search Engine Optimization / Advising (SEO)</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">$75 <span class="price-tag__label">Essential</span></span>
+                <span class="price-tag price-tag--advanced">$125 <span class="price-tag__label">Advanced</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">Guide on how to use search engines and optimize them to help buyers find your site quickly and easily.</p>
+          </div>
+
+          <!-- Social Media Development -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Social Media Development</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">$150 <span class="price-tag__label">Essential</span></span>
+                <span class="price-tag price-tag--advanced">$300 <span class="price-tag__label">Advanced</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">This is a brand-driven marketing service, so our goal is to efficiently convert your views into sales, while also building and maintaining a positive social media presence across your socials that stands out and strikes a chord with your audience.</p>
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BRANDING SERVICES DETAIL ===== -->
+  <section class="section" id="branding">
+    <div class="container">
+      <div class="section-header">
+        <p class="page-header__eyebrow">Make Your Mark</p>
+        <h2 class="section-title">Branding Services</h2>
+        <p class="section-subtitle">Services that define your business.</p>
+      </div>
+      <div class="service-list">
+
+          <!-- Brand Consultation -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Brand Consultation</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">$75 <span class="price-tag__label">Essential</span></span>
+                <span class="price-tag price-tag--advanced">$125 <span class="price-tag__label">Advanced</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">Professional assessment of your company's public image, outreach, and goals, along with suggestions on where it can be optimized.</p>
+          </div>
+
+          <!-- New Brand Development -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">New Brand Development</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">$75 <span class="price-tag__label">Essential</span></span>
+                <span class="price-tag price-tag--advanced">$125 <span class="price-tag__label">Advanced</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">We walk you through how to present, position, and communicate your company's values to your market.</p>
+          </div>
+
+          <!-- Complete Board Kit -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Complete Board Kit</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">$350 <span class="price-tag__label">Essential</span></span>
+                <span class="price-tag price-tag--advanced">$600 <span class="price-tag__label">Advanced</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">Complete brand concept creation; we work together to pin-point your company's values, goals, target audience, and positioning. We then design a mood board that includes a logo, slogan, colors, fonts, and visual direction.</p>
+          </div>
+
+          <!-- Pictorial Mark Logo Design -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Pictorial Mark Logo Design</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">$100 <span class="price-tag__label">Essential</span></span>
+                <span class="price-tag price-tag--advanced">$180 <span class="price-tag__label">Advanced</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">Emblem / picture that represents a company.</p>
+          </div>
+
+          <!-- Wordmark Logo Design -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Wordmark Logo Design</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">$100 <span class="price-tag__label">Essential</span></span>
+                <span class="price-tag price-tag--advanced">$180 <span class="price-tag__label">Advanced</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">A stylized company name.</p>
+          </div>
+
+          <!-- Combination Mark / Emblem Logo Design -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Combination Mark or Emblem Logo Design</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">$180 <span class="price-tag__label">Essential</span></span>
+                <span class="price-tag price-tag--advanced">$330 <span class="price-tag__label">Advanced</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">A pictorial mark integrated into a wordmark.</p>
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GRAPHIC DESIGN SERVICES DETAIL ===== -->
+  <section class="section" id="graphic-design">
+    <div class="container">
+      <div class="section-header">
+        <p class="page-header__eyebrow">Look the Part</p>
+        <h2 class="section-title">Graphic Design Services</h2>
+        <p class="section-subtitle">Services that provide visual deliverables.</p>
+        <p class="section-note">All designs include final, print-ready or digital-ready files. Printing services are not included.</p>
+      </div>
+      <div class="service-list">
+
+          <!-- Business Card Design -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Business Card Design</span>
+            </div>
+            <div class="service-item__sub-grid">
+              <div class="sub-price">
+                <span class="sub-price__label">Essential 1 Side</span>
+                <span class="sub-price__amount">$40</span>
+              </div>
+              <div class="sub-price">
+                <span class="sub-price__label">Essential 2 Side</span>
+                <span class="sub-price__amount">$55</span>
+              </div>
+              <div class="sub-price">
+                <span class="sub-price__label">Advanced 1 Side</span>
+                <span class="sub-price__amount">$55</span>
+              </div>
+              <div class="sub-price">
+                <span class="sub-price__label">Advanced 2 Side</span>
+                <span class="sub-price__amount">$70</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flyers / Posters / Hanging Banners -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Flyers / Posters / Hanging Banners</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">$50 <span class="price-tag__label">Essential</span></span>
+                <span class="price-tag price-tag--advanced">$90 <span class="price-tag__label">Advanced</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">Eye-catching designs for both digital and physical mediums, specially designed to stand out from the crowd. (We do not print)</p>
+          </div>
+
+          <!-- Presentation Design -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Presentation Design</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">Starting at $100 <span class="price-tag__label">Varies</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">You tell us all the information you need to present and the medium used to present it, then we organize and stylize it for you.</p>
+          </div>
+
+          <!-- Website Template Design -->
+          <div class="service-item">
+            <div class="service-item__header">
+              <span class="service-item__name">Website Template Design</span>
+              <div class="service-item__pricing">
+                <span class="price-tag price-tag--essential">Starting at $200 <span class="price-tag__label">Varies</span></span>
+              </div>
+            </div>
+            <p class="service-item__desc">We design the structure and style of your website, you can then send that template (wireframe) to a developer, or have us create and launch the site through Webflow for an additional charge.</p>
+
+            <!-- Nested: Website Template Creation -->
+            <div class="service-item__sub">
+              <div class="service-item__header">
+                <span class="service-item__name">Website Template Creation</span>
+                <div class="service-item__pricing">
+                  <span class="price-tag price-tag--essential">Starting at $400 <span class="price-tag__label">Varies</span></span>
+                </div>
+              </div>
+              <p class="service-item__desc">We take your approved wireframe and turn it into a fully functional, live website using Webflow. To do this, we'll need temporary access to the necessary business accounts, including email, payment setup, and relevant systems. Webflow also charges a monthly hosting and maintenance fee, which varies depending on your website's features. You maintain full control while we ensure your site is polished, responsive, and user-ready.</p>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="quote-cta">
+            <a href="#get-started" class="btn btn--blue btn--large">Request A Quote&nbsp;&rarr;</a>
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="page-header__eyebrow">Our Story</p>
+        <h2 class="section-title">About Us</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-content">
+          <p>Hi, my name is <strong>Jonathan Lewis</strong>! I'm a digital marketing major, president of my American Marketing Association chapter, and founder of Total Image.</p>
+          <p>From my experience, marketing and branding have become seen as a luxury for only large, established companies. This shouldn't be the case, so I started Total Image to help every company grow, regardless of size.</p>
+          <div class="about-mission">
+            <p>&ldquo;Our mission is simple: provide efficient, consistent, and aesthetic branding and marketing on your budget.&rdquo;</p>
+          </div>
+        </div>
+        <div class="about-photo">
+          <img src="Images/About1.png" alt="Jonathan Lewis" class="about-photo__img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GET STARTED / FORMS ===== -->
+  <section class="section" id="get-started">
+    <div class="container">
+      <div class="section-header">
+        <p class="page-header__eyebrow">Let's Work Together</p>
+        <h2 class="section-title">Get Started</h2>
+        <p class="section-subtitle">Request a quote or book a free consultation — we'll get back to you as soon as possible.</p>
+      </div>
+      <div class="get-started-grid">
+
+        <!-- ===== REQUEST A QUOTE ===== -->
+        <div class="form-card" id="quote">
+          <h3 class="form-card__title">Request A Quote</h3>
+          <p class="form-card__desc">Tell us your name, preferred email, business name, desired service(s), and timeline. We'll review your request and get back to you with a realistic quote as soon as possible.</p>
+
+          <form id="quoteForm" novalidate>
+            <div class="form-group">
+              <label for="quoteName">Your Name *</label>
+              <input type="text" id="quoteName" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="quoteEmail">Preferred Email *</label>
+              <input type="email" id="quoteEmail" name="email" placeholder="jane@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="quoteBusiness">Business Name *</label>
+              <input type="text" id="quoteBusiness" name="business" placeholder="Your Business LLC" required>
+            </div>
+            <div class="form-group">
+              <label for="quoteServices">Desired Service(s) *</label>
+              <textarea id="quoteServices" name="services" placeholder="e.g., Business card design, brand package, social media ads&hellip;" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="quoteTimeline">Timeline</label>
+              <input type="text" id="quoteTimeline" name="timeline" placeholder="e.g., 2 weeks, end of month…">
+            </div>
+            <div class="form-group">
+              <label for="quoteDetails">Additional Details</label>
+              <textarea id="quoteDetails" name="details" placeholder="Tell us more about what you need…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--blue btn--large" style="width:100%;">Send Quote Request</button>
+          </form>
+
+          <!-- Success message -->
+          <div class="form-success" id="quoteSuccess">
+            <div class="form-success__icon">
+              <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h3>Quote Request Sent!</h3>
+            <p>We'll review your request and get back to you as soon as possible.</p>
+          </div>
+        </div>
+
+        <!-- ===== FREE CONSULTATION ===== -->
+        <div class="form-card" id="consultation">
+          <h3 class="form-card__title">Free Consultation</h3>
+          <p class="form-card__desc">Tell us your name, preferred email, business name, and what questions you have about our services. We'll take a look and get back to you as soon as possible.</p>
+
+          <form id="consultForm" novalidate>
+            <div class="form-group">
+              <label for="consultName">Your Name *</label>
+              <input type="text" id="consultName" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="consultEmail">Preferred Email *</label>
+              <input type="email" id="consultEmail" name="email" placeholder="jane@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="consultBusiness">Business Name *</label>
+              <input type="text" id="consultBusiness" name="business" placeholder="Your Business LLC" required>
+            </div>
+            <div class="form-group">
+              <label for="consultQuestions">Your Questions *</label>
+              <textarea id="consultQuestions" name="questions" placeholder="What would you like to know about our services?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--large" style="width:100%;">Send Consultation Request</button>
+          </form>
+
+          <!-- Success message -->
+          <div class="form-success" id="consultSuccess">
+            <div class="form-success__icon">
+              <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h3>Consultation Request Sent!</h3>
+            <p>We'll review your questions and get back to you as soon as possible.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <p class="page-header__eyebrow">Got Questions?</p>
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-subtitle">Frequently Asked Questions</p>
+      </div>
+      <div class="faq-list">
+
+        <!-- Q1 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How does pricing work?</span>
+            <span class="faq-question__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>We charge a flat rate depending on the task, that way you know exactly what you need to pay upfront. All you have to do is tell us what services you want, how large and complex the tasks are, then wait for us to send you a quote for the total. Don't worry, we only request payment once you approve the quote.</p>
+            <p>Some tasks are larger or more complex than others, for this reason, some of our services are listed in a price range. This means the final cost of the service will fall between those two values, depending on the scope and complexity.</p>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do you require upfront payment?</span>
+            <span class="faq-question__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>Payment is required upfront for most services. For larger projects, a deposit may be required before work begins, with the remaining balance due prior to final delivery.</p>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do I own the final designs?</span>
+            <span class="faq-question__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, usage rights (ownership) are released upon receipt of full payment and completion of the final, approved product.</p>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How do revisions work?</span>
+            <span class="faq-question__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>In order to keep costs down and help as many clients as possible, we include one revision round with each relevant service. Additional rounds are billed separately and will vary in cost depending on the service.</p>
+            <p><strong>Revision Round:</strong> A consolidated list of requested changes submitted at one time.</p>
+            <p>Revisions are not included in the estimated project span, so we are not accountable if revisions cause us to work past the deadline.</p>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How do corrections work?</span>
+            <span class="faq-question__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>Corrections to mistakes on our end do not count as revisions, and are completely free of charge. These include correcting spelling errors, formatting issues, or overlooked elements that were specified in the initial service request.</p>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do you develop websites?</span>
+            <span class="faq-question__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, if you hire us to design your website layout or wireframe, we offer website creation through Webflow as an additional service. To do this however, we will need temporary access to the necessary business accounts, including email, payment setup, and relevant systems. Webflow also charges a monthly hosting and maintenance fee, which varies depending on your website's features.</p>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What happens if I don't like the design?</span>
+            <span class="faq-question__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>If you are unhappy with the first iteration, all relevant services come with a complimentary round of revisions. Additional rounds are also available and are billed separately. If after those revisions you are still unhappy with the product/service, you will not be charged. Keeping in mind that usage rights (ownership) are only released upon satisfaction and receipt of payment for the final product.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FINAL CTA ===== -->
   <section class="section home-cta">
     <div class="container home-cta__inner">
       <h2 class="home-cta__title">Ready to Elevate Your Brand?</h2>
       <p class="home-cta__subtitle">Get a free quote or book a free consultation — no commitment required.</p>
       <div class="home-cta__actions">
-        <a href="get-started.html" class="btn btn--blue btn--large">Get a Free Quote</a>
-        <a href="get-started.html#consultation" class="btn btn--outline btn--large">Free Consultation</a>
+        <a href="#get-started" class="btn btn--blue btn--large">Get a Free Quote</a>
+        <a href="#consultation" class="btn btn--outline btn--large">Free Consultation</a>
       </div>
     </div>
   </section>
@@ -108,10 +583,10 @@
       </div>
       <p class="footer__text">&copy; 2026 Total Image. All rights reserved.</p>
       <div class="footer__links">
-        <a href="services.html" class="footer__link">Services</a>
-        <a href="about.html" class="footer__link">About</a>
-        <a href="get-started.html" class="footer__link">Get Started</a>
-        <a href="faq.html" class="footer__link">FAQ</a>
+        <a href="#services" class="footer__link">Services</a>
+        <a href="#about" class="footer__link">About</a>
+        <a href="#get-started" class="footer__link">Get Started</a>
+        <a href="#faq" class="footer__link">FAQ</a>
       </div>
     </div>
   </footer>

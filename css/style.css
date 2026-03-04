@@ -34,6 +34,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
   font-size: 16px;
   overflow-y: scroll;
 }
@@ -262,7 +263,7 @@ p {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.75rem;
-  border-radius: 0;
+  border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 600;
   transition: all var(--transition);
@@ -447,7 +448,7 @@ p {
   background: transparent;
   color: var(--black);
   border: 2px solid var(--gray-300);
-  border-radius: 0;
+  border-radius: 8px;
   padding: 0.75rem 1.75rem;
   font-size: 0.95rem;
   font-weight: 600;
@@ -561,6 +562,14 @@ p {
   line-height: 1.7;
 }
 
+.section-note {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  margin-top: 0.75rem;
+  font-style: italic;
+  text-align: center;
+}
+
 /* Services grid */
 .home-services__grid {
   display: grid;
@@ -574,7 +583,7 @@ p {
   gap: 0.75rem;
   padding: 2rem;
   border: 1px solid var(--gray-200);
-  border-radius: 0;
+  border-radius: 12px;
   text-decoration: none;
   color: inherit;
   background: var(--white);
@@ -592,7 +601,7 @@ p {
   width: 44px;
   height: 44px;
   background: linear-gradient(135deg, var(--blue-light) 0%, var(--blue-sky-light) 100%);
-  border-radius: 0;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -776,7 +785,7 @@ p {
 .service-card {
   background: var(--white);
   border: 1px solid var(--gray-200);
-  border-radius: 0;
+  border-radius: 12px;
   padding: 2.5rem 2rem;
   transition: all var(--transition);
   display: flex;
@@ -794,7 +803,7 @@ p {
   width: 48px;
   height: 48px;
   background: var(--gray-100);
-  border-radius: 0;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -817,7 +826,7 @@ p {
   color: var(--blue);
   background: var(--blue-light);
   padding: 0.25rem 0.7rem;
-  border-radius: 0;
+  border-radius: 6px;
   display: inline-block;
   align-self: flex-start;
 }
@@ -844,7 +853,7 @@ p {
 /* Service items */
 .service-item {
   background: var(--white);
-  border-radius: 0;
+  border-radius: 12px;
   padding: 1.75rem;
   border: 1px solid var(--gray-200);
   transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
@@ -884,7 +893,7 @@ p {
   font-size: 0.85rem;
   font-weight: 600;
   padding: 0.2rem 0.6rem;
-  border-radius: 0;
+  border-radius: 6px;
 }
 
 .price-tag--essential {
@@ -954,7 +963,7 @@ p {
   width: 100%;
   max-width: 560px;
   height: auto;
-  border-radius: 0;
+  border-radius: 12px;
   object-fit: cover;
 }
 
@@ -1000,7 +1009,7 @@ p {
 .form-card {
   background: var(--white);
   border: 1px solid var(--gray-200);
-  border-radius: 0;
+  border-radius: 12px;
   padding: 2.5rem;
 }
 
@@ -1035,7 +1044,7 @@ p {
   width: 100%;
   padding: 0.75rem 1rem;
   border: 1px solid var(--gray-200);
-  border-radius: 0;
+  border-radius: 8px;
   font-family: inherit;
   font-size: 0.95rem;
   color: var(--black);
@@ -1278,7 +1287,7 @@ main {
   font-size: 0.85rem;
   padding: 0.4rem 0.6rem;
   background: var(--gray-100);
-  border-radius: 0;
+  border-radius: 6px;
 }
 
 .sub-price__label {

@@ -59,16 +59,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ===================================================================
    * FORM HANDLING — compose mailto links
-   * Sends form data as an email to totalimagebranding@gmail.com
+   * Sends form data via Formspree to totalimagebranding@gmail.com
    * =================================================================== */
-  const COMPANY_EMAIL = 'totalimagebranding@gmail.com';
+  const FORMSPREE_QUOTE   = 'https://formspree.io/f/xdalqnbz';
+  const FORMSPREE_CONSULT = 'https://formspree.io/f/mpqjvabg';
 
   // ---- Quote Form ----
   const quoteForm    = document.getElementById('quoteForm');
   const quoteSuccess = document.getElementById('quoteSuccess');
 
   if (quoteForm) {
-    quoteForm.addEventListener('submit', (e) => {
+    quoteForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       // Basic validation
@@ -77,30 +78,29 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const name     = document.getElementById('quoteName').value.trim();
-      const email    = document.getElementById('quoteEmail').value.trim();
-      const business = document.getElementById('quoteBusiness').value.trim();
-      const services = document.getElementById('quoteServices').value.trim();
-      if (!services) { alert('Please describe the service(s) you need.'); return; }
-      const timeline = document.getElementById('quoteTimeline').value.trim();
-      const details  = document.getElementById('quoteDetails').value.trim();
+      const submitBtn = quoteForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
 
-      const subject = encodeURIComponent(`Quote Request — ${business}`);
-      const body    = encodeURIComponent(
-        `Name: ${name}\n` +
-        `Email: ${email}\n` +
-        `Business: ${business}\n` +
-        `Desired Service(s): ${services}\n` +
-        `Timeline: ${timeline || 'Not specified'}\n` +
-        `\nAdditional Details:\n${details || 'None'}`
-      );
+      try {
+        const response = await fetch(FORMSPREE_QUOTE, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(quoteForm),
+        });
 
-      // Open default mail client
-      window.location.href = `mailto:${COMPANY_EMAIL}?subject=${subject}&body=${body}`;
-
-      // Show success state
-      quoteForm.style.display = 'none';
-      if (quoteSuccess) quoteSuccess.classList.add('show');
+        if (response.ok) {
+          quoteForm.style.display = 'none';
+          if (quoteSuccess) quoteSuccess.classList.add('show');
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (err) {
+        alert('Something went wrong. Please try again or email us directly at totalimagebranding@gmail.com.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
     });
   }
 
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const consultSuccess = document.getElementById('consultSuccess');
 
   if (consultForm) {
-    consultForm.addEventListener('submit', (e) => {
+    consultForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       if (!consultForm.checkValidity()) {
@@ -117,23 +117,29 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const name      = document.getElementById('consultName').value.trim();
-      const email     = document.getElementById('consultEmail').value.trim();
-      const business  = document.getElementById('consultBusiness').value.trim();
-      const questions = document.getElementById('consultQuestions').value.trim();
+      const submitBtn = consultForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
 
-      const subject = encodeURIComponent(`Free Consultation Request — ${business}`);
-      const body    = encodeURIComponent(
-        `Name: ${name}\n` +
-        `Email: ${email}\n` +
-        `Business: ${business}\n` +
-        `\nQuestions:\n${questions}`
-      );
+      try {
+        const response = await fetch(FORMSPREE_CONSULT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(consultForm),
+        });
 
-      window.location.href = `mailto:${COMPANY_EMAIL}?subject=${subject}&body=${body}`;
-
-      consultForm.style.display = 'none';
-      if (consultSuccess) consultSuccess.classList.add('show');
+        if (response.ok) {
+          consultForm.style.display = 'none';
+          if (consultSuccess) consultSuccess.classList.add('show');
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (err) {
+        alert('Something went wrong. Please try again or email us directly at totalimagebranding@gmail.com.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
     });
   }
 
@@ -155,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavShadow();
   initScrollReveal();
   initButtonRipple();
+  initActiveNavOnScroll();
 
 });
 
@@ -259,4 +266,34 @@ function initButtonRipple() {
       setTimeout(() => ripple.remove(), 600);
     });
   });
+}
+
+/* ===================================================================
+ * ACTIVE NAV LINK ON SCROLL (single-page)
+ * =================================================================== */
+function initActiveNavOnScroll() {
+  const navLinksAll = document.querySelectorAll('.nav__link[href^="#"]');
+  if (!navLinksAll.length) return;
+
+  const sections = [];
+  navLinksAll.forEach(link => {
+    const id = link.getAttribute('href').substring(1);
+    const section = document.getElementById(id);
+    if (section) sections.push({ id, el: section, link });
+  });
+
+  function updateActive() {
+    const scrollY = window.scrollY + 120;
+    let current = sections[0];
+
+    for (const s of sections) {
+      if (s.el.offsetTop <= scrollY) current = s;
+    }
+
+    navLinksAll.forEach(l => l.classList.remove('nav__link--active'));
+    if (current) current.link.classList.add('nav__link--active');
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
 }
