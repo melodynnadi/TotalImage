@@ -207,25 +207,6 @@ p {
 #ama-partnership {
   padding-top: 3.5rem;
   padding-bottom: 3rem;
-  background-image: url('../Images/AMA.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 400px auto;
-  position: relative;
-}
-
-#ama-partnership::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(249,249,249,0.88);
-  pointer-events: none;
-  z-index: 0;
-}
-
-#ama-partnership .container {
-  position: relative;
-  z-index: 1;
 }
 
 #about {
@@ -461,13 +442,12 @@ p {
   left: 47%;
   top: 60%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  max-width: 50%;
-  opacity: 0.08;
+  width: 900px;
+  max-width: 70%;
+  opacity: 0.04;
   pointer-events: none;
   z-index: 0;
   object-fit: contain;
-  filter: blur(1px);
 }
 
 /* Gradient glow orbs */
