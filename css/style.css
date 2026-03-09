@@ -1577,7 +1577,7 @@ main {
   }
 
   .hero {
-    padding-top: calc(60px + 0.5rem);
+    padding-top: calc(60px + 1.5rem);
   }
 }
 
@@ -1592,7 +1592,7 @@ main {
   }
 
   .hero {
-    padding-top: calc(60px + 0.25rem);
+    padding-top: calc(60px + 1.25rem);
   }
 
   .hero__container {
